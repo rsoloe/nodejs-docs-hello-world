@@ -12,10 +12,10 @@ variables:
   azureSubscription: '70320c65-ac25-42dc-8047-11db85aa084f'
 
   # Web app name
-  webAppName: 'soloe-nodejs-hello-world'
+  webAppName: 'helloworld-nodejs-22336'
 
   # Environment name
-  environmentName: 'hello-world-nodejs-rg'
+  environmentName: 'helloworld-nodejs-22336'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
