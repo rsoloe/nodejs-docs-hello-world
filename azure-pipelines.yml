@@ -76,3 +76,15 @@ stages:
               runtimeStack: 'NODE|10.10'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
+- task: LoadRunnerEnterpriseTesting@1
+  inputs:
+    descriptionString: 'LRE test'
+    varPCServer: 'https://lrefrademo.saas.microfocus.com/LRE/?tenant=b41e9581-7506-49cf-bf76-e052e4f3ddd2'
+    varUserName: 'saas_rsoloe'
+    varPassWord: '$(lre_password)'
+    varDomain: 'DEFAULT'
+    varProject: 'LRE_Ray'
+    varTestID: '253'
+    varTrending: 'AssociatedTrend'
+    varTimeslotDuration: '15'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/LRETest'
