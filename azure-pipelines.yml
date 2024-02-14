@@ -76,6 +76,8 @@ stages:
               runtimeStack: 'NODE|10.10'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
+
+- stage: Test
 - task: LoadRunnerEnterpriseTesting@1
   inputs:
     descriptionString: 'LRE test'
