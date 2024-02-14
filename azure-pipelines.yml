@@ -15,7 +15,7 @@ variables:
   webAppName: 'soloe-nodejs-hello-world'
 
   # Environment name
-  environmentName: 'soloe-nodejs-hello-world'
+  environmentName: 'hello-world-nodejs-rg'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
