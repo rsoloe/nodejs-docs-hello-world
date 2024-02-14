@@ -52,6 +52,19 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
+- task: LoadRunnerEnterpriseTesting@1
+  inputs:
+    descriptionString: 'Performance Test'
+    varPCServer: 'https://lrefrademo.saas.microfocus.com/LRE/?tenant=b41e9581-7506-49cf-bf76-e052e4f3ddd2'
+    varUserName: 'saas_rsoloe'
+    varPassWord: '$(lre_password)'
+    varDomain: 'DEFAULT'
+    varProject: 'LRE_Ray'
+    varTestID: '253'
+    varTrending: 'AssociatedTrend'
+    varTimeslotDuration: '30'
+    varUseSLAInStatus: true
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/LRETest'
 
 - stage: Deploy
   displayName: Deploy stage
